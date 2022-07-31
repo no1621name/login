@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="login-page-wrapp d-flex">
+      <ul class="nav nav-pills" id="tabsNav" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="loginTab" data-bs-toggle="pill" data-bs-target="#login" type="button" role="tab" aria-controls="login-tab-pane" aria-selected="true">Login</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="signUpTab" data-bs-toggle="pill" data-bs-target="#signUp" type="button" role="tab" aria-controls="sign-up-tab-pane" aria-selected="false">Sign up</button>
+        </li>
+      </ul>
+      <div class="tabs-content d-flex align-items-center justify-content-end" id="tabs">
+        <div class="login-form-wrap tab-pane fade show active d-flex align-items-center justify-content-end" id="login">
+          <div class="form-card card ml-auto">
+            <div class="card-body">
+              <h4 class="card-title">Please Login</h4>
+              <form name="loginForm" class="d-flex flex-column">
+                <div class="form-group">
+                  <label for="emailLogin">Email address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="emailLogin"
+                    aria-describedby="emailHelp"
+                    placeholder="Enter email"
+                    data-required="email"
+                    data-invalid-message="Please provide valid email example@example.com"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="passwordLogin">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="passwordLogin"
+                    placeholder="Password"
+                    data-required="password"
+                  />
+                </div>
+                <button type="submit" class="btn submit-btn btn-primary" id="submitButtonLogin">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="sign-up-form-wrap tab-pane fade d-flex align-items-center justify-content-end" id="signUp">
+          <div class="form-card card ml-auto">
+            <div class="card-body">
+              <h4 class="card-title">Please Sign Up</h4>
+              <form name="sugnUpForm" class="row row-cols-2">
+                <div class="form-group">
+                  <label for="emailSignUp">Email address</label>
+                  <input
+                    name="email"
+                    type="email"
+                    class="form-control"
+                    id="emailSignUp"
+                    aria-describedby="emailHelp"
+                    placeholder="Enter email"
+                    data-required="email"
+                    data-invalid-message="Please provide valid email example@example.com"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="passwordSignUp">Password</label>
+                  <input
+                    name="password"
+                    type="text"
+                    class="form-control"
+                    id="passwordSignUp"
+                    placeholder="Password"
+                    data-required="password"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="nicknameSignUp">Nickname</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nicknameSignUp"
+                    name="nickname"
+                    placeholder="Nickname"
+                    data-required="textInfo"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="firstNameSignUp">First name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="firstNameSignUp"
+                    name="first_name"
+                    placeholder="First name"
+                    data-required="textInfo"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="lastNameSignUp">Last name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="lastNameSignUp"
+                    name="last_name"
+                    placeholder="Last name"
+                    data-required="textInfo"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="phoneSignUp">Phone</label>
+                  <input
+                    type="tezt"
+                    class="form-control"
+                    id="phoneSignUp"
+                    name="phone"
+                    placeholder="0631234567"
+                    data-required="phone"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="genderSignUp">Gender</label>
+                  <select name="gender_orientation" id="genderSignUp" class="form-control" data-required="select">
+                    <option value="" selected disabled>Select gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="countrySignUp">Country</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="countrySignUp"
+                    name="country"
+                    placeholder="Ukraine"
+                    data-required="textInfo"
+                    list="countriesDataList"
+                  />
+                  <datalist id="countriesDataList"></datalist>
+                </div>
+                <div class="form-group">
+                  <label for="citySignUp">City</label>
+                  <select name="city" id="citySignUp" class="form-control" data-required="select" disabled>
+                    <option value="" selected disabled>Select city</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="dateSignUp">Date of birthday</label>
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="dateSignUp"
+                    name="date"
+                    data-required="date"
+                  />
+                </div>
+                <button type="submit" class="btn submit-btn btn-primary" id="submitButtonSignUp">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.login-form-wrap -->
+      <div class="login-greeting-screen d-flex align-items-center">
+        <div class="login-greeting-screen-text">
+          <h1 class="login-greeting-screen-title">Welcome to my app</h1>
+          <p class="login-greeting-screen-description">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
+            inventore non accusantium earum, illo dolores reprehenderit laborum
+            ratione quos doloribus repellat eligendi deleniti. Ipsum voluptate
+            ipsa exercitationem eaque totam. A.
+          </p>
+        </div>
+      </div>
+      <!-- /.login-greeting-screen -->
+    </div>
+    <!-- /.login-page-wrapp -->
+  </body>
+</html>

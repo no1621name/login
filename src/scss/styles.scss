@@ -1,0 +1,88 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+
+.login-page-wrapp{
+  height: 100vh;
+  .nav{
+    position: fixed;
+    left: 10px;
+    top: 10px ;
+    .nav-link{
+      color: $indigo-600 !important;
+      &.active{
+        color: $white !important;
+        background: $indigo-600 !important;
+      }
+    }
+  }
+  .tabs-content {
+    width: 50%;
+    .tab-pane{
+      width: 40%;
+      &.fade:not(.show) {
+        opacity: 0;
+        width: 0 !important;
+        height: 0 !important;
+        overflow: hidden;
+      }
+    }
+    .login-form-wrap, .sign-up-form-wrap{
+      .form-card {
+        max-width: 500px;
+        width: 100%;
+        margin-right: 30px;
+        .card-title {
+          color: $gray-600;
+        }
+        form{
+          height: max-content;
+          .form-group {
+            padding-top: 10px;
+            label{
+              padding-bottom: 5px;
+            }
+          }
+          .btn{
+            margin-top: 10px;
+            border-color: $indigo-600 !important;
+            background: $indigo-600 !important;
+            &:focus{
+              box-shadow: 0 0 0 0.25rem rgba($indigo-600, .5) !important;
+            }
+          }
+        }
+      }
+    }
+    .sign-up-form-wrap{
+      width: 60%;
+      .form-card {
+        max-width: 100%;
+        form {
+          select{
+            cursor: pointer;
+          }
+          .btn{
+            margin: 10px auto 0 auto;
+          }
+        }
+      }
+    }
+  }
+  .login-greeting-screen{
+    background: $pink-400;
+    width: 50%;
+    padding: 20px;
+    .login-greeting-screen-text {
+      color: $white;
+      max-width: 500px;
+    }
+    .login-greeting-screen-title {
+      margin-bottom: 30px;
+      text-transform: capitalize;
+    }
+    .login-greeting-screen-description {
+      line-height: 1.4;
+    }
+  }
+}
